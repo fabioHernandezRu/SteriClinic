@@ -1,0 +1,136 @@
+Flow report for practica4
+Wed Oct 28 22:11:18 2015
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Flow Status                        ; Successful - Wed Oct 28 22:11:18 2015                     ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
+; Revision Name                      ; practica4                                                 ;
+; Top-level Entity Name              ; practica4                                                 ;
+; Family                             ; MAX 10                                                    ;
+; Device                             ; 10M08DAF484C8GES                                          ;
+; Timing Models                      ; Preliminary                                               ;
+; Total logic elements               ; 5,740 / 8,064 ( 71 % )                                    ;
+;     Total combinational functions  ; 4,802 / 8,064 ( 60 % )                                    ;
+;     Dedicated logic registers      ; 3,700 / 8,064 ( 46 % )                                    ;
+; Total registers                    ; 3768                                                      ;
+; Total pins                         ; 109 / 250 ( 44 % )                                        ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 73,088 / 387,072 ( 19 % )                                 ;
+; Embedded Multiplier 9-bit elements ; 6 / 48 ( 13 % )                                           ;
+; Total PLLs                         ; 1 / 2 ( 50 % )                                            ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                             ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                                             ;
++------------------------------------+-----------------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/28/2015 22:00:35 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; practica4           ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                           ;
++-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 3690834519.144609483230752                                ; --            ; --          ; --         ;
+; FITTER_EFFORT                       ; Standard Fit                                              ; Auto Fit      ; --          ; --         ;
+; IOBANK_VCCIO                        ; 3.3V                                                      ; --            ; --          ; 7          ;
+; IOBANK_VCCIO                        ; 3.3V                                                      ; --            ; --          ; 8          ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                        ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; mi_nios/synthesis/../mi_nios.cmp                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; mi_nios/synthesis/../../mi_nios.qsys                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                         ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                         ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                                                  ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                     ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                    ; --            ; --          ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                              ; --            ; --          ; --         ;
+; SLD_FILE                            ; mi_nios/synthesis/mi_nios.regmap                          ; --            ; --          ; --         ;
+; SLD_FILE                            ; mi_nios/synthesis/mi_nios.debuginfo                       ; --            ; --          ; --         ;
+; SLD_INFO                            ; QSYS_NAME mi_nios HAS_SOPCINFO 1 GENERATION_ID 1446094586 ; --            ; mi_nios     ; --         ;
+; SOPCINFO_FILE                       ; mi_nios/synthesis/../../mi_nios.sopcinfo                  ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                        ; --            ; --          ; --         ;
++-------------------------------------+-----------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:04:04     ; 1.0                     ; 959 MB              ; 00:04:47                           ;
+; Fitter               ; 00:05:46     ; 1.4                     ; 1376 MB             ; 00:05:18                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 640 MB              ; 00:00:08                           ;
+; Total                ; 00:10:00     ; --                      ; --                  ; 00:10:13                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; Adrizcorp-PC     ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter               ; Adrizcorp-PC     ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler            ; Adrizcorp-PC     ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off practica4 -c practica4
+quartus_fit --read_settings_files=on --write_settings_files=off practica4 -c practica4
+quartus_asm --read_settings_files=off --write_settings_files=off practica4 -c practica4
+
+
+
