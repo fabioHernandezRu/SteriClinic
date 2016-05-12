@@ -1,0 +1,177 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Stericlinic\HWD\DE0_NANO_SOC_GHRD\DE0_NANO_SOC_QSYS.qsys --block-symbol-file --output-directory=D:\Stericlinic\HWD\DE0_NANO_SOC_GHRD\DE0_NANO_SOC_QSYS --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS.qsys
+Progress: Reading input file
+Progress: Adding RTC_SCL [altera_avalon_pio 15.0]
+Progress: Parameterizing module RTC_SCL
+Progress: Adding RTC_SDA [altera_avalon_pio 15.0]
+Progress: Parameterizing module RTC_SDA
+Progress: Adding adc_ltc2308 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308
+Progress: Adding clk_50 [clock_source 15.0]
+Progress: Parameterizing module clk_50
+Progress: Adding epcs_flash_controller_0 [altera_avalon_epcs_flash_controller 15.0]
+Progress: Parameterizing module epcs_flash_controller_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 15.0]
+Progress: Parameterizing module jtag_uart
+Progress: Adding nios2_qsys [altera_nios2_qsys 15.0]
+Progress: Parameterizing module nios2_qsys
+Progress: Adding onchip_memory2 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2
+Progress: Adding pll_sys [altera_pll 15.0]
+Progress: Parameterizing module pll_sys
+Progress: Adding sw [altera_avalon_pio 15.0]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 15.0]
+Progress: Parameterizing module sysid_qsys
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: DE0_NANO_SOC_QSYS.RTC_SDA: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: DE0_NANO_SOC_QSYS.nios2_qsys: Nios II Classic cores are now superseded by improved Gen 2 cores.
+Info: DE0_NANO_SOC_QSYS.pll_sys: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: DE0_NANO_SOC_QSYS.pll_sys: Able to implement PLL with user settings
+Info: DE0_NANO_SOC_QSYS.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: DE0_NANO_SOC_QSYS.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: DE0_NANO_SOC_QSYS.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Stericlinic\HWD\DE0_NANO_SOC_GHRD\DE0_NANO_SOC_QSYS.qsys --synthesis=VERILOG --output-directory=D:\Stericlinic\HWD\DE0_NANO_SOC_GHRD\DE0_NANO_SOC_QSYS\synthesis --family="Cyclone V" --part=5CSEMA4U23C6
+Progress: Loading DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS.qsys
+Progress: Reading input file
+Progress: Adding RTC_SCL [altera_avalon_pio 15.0]
+Progress: Parameterizing module RTC_SCL
+Progress: Adding RTC_SDA [altera_avalon_pio 15.0]
+Progress: Parameterizing module RTC_SDA
+Progress: Adding adc_ltc2308 [adc_ltc2308 1.1]
+Progress: Parameterizing module adc_ltc2308
+Progress: Adding clk_50 [clock_source 15.0]
+Progress: Parameterizing module clk_50
+Progress: Adding epcs_flash_controller_0 [altera_avalon_epcs_flash_controller 15.0]
+Progress: Parameterizing module epcs_flash_controller_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 15.0]
+Progress: Parameterizing module jtag_uart
+Progress: Adding nios2_qsys [altera_nios2_qsys 15.0]
+Progress: Parameterizing module nios2_qsys
+Progress: Adding onchip_memory2 [altera_avalon_onchip_memory2 15.0]
+Progress: Parameterizing module onchip_memory2
+Progress: Adding pll_sys [altera_pll 15.0]
+Progress: Parameterizing module pll_sys
+Progress: Adding sw [altera_avalon_pio 15.0]
+Progress: Parameterizing module sw
+Progress: Adding sysid_qsys [altera_avalon_sysid_qsys 15.0]
+Progress: Parameterizing module sysid_qsys
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: DE0_NANO_SOC_QSYS.RTC_SDA: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: DE0_NANO_SOC_QSYS.nios2_qsys: Nios II Classic cores are now superseded by improved Gen 2 cores.
+Info: DE0_NANO_SOC_QSYS.pll_sys: The legal reference clock frequency is 5.0 MHz..800.0 MHz
+Info: DE0_NANO_SOC_QSYS.pll_sys: Able to implement PLL with user settings
+Info: DE0_NANO_SOC_QSYS.sw: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: DE0_NANO_SOC_QSYS.sysid_qsys: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: DE0_NANO_SOC_QSYS.sysid_qsys: Time stamp will be automatically updated when this component is generated.
+Info: DE0_NANO_SOC_QSYS: Generating DE0_NANO_SOC_QSYS "DE0_NANO_SOC_QSYS" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src2 and cmd_mux_002.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_002.sink1
+Info: Inserting clock-crossing logic between rsp_demux_002.src0 and rsp_mux.sink2
+Info: Inserting clock-crossing logic between rsp_demux_002.src1 and rsp_mux_001.sink0
+Warning: DE0_NANO_SOC_QSYS: "No matching role found for epcs_flash_controller_0:epcs_control_port:dataavailable (dataavailable)"
+Warning: DE0_NANO_SOC_QSYS: "No matching role found for epcs_flash_controller_0:epcs_control_port:endofpacket (endofpacket)"
+Warning: DE0_NANO_SOC_QSYS: "No matching role found for epcs_flash_controller_0:epcs_control_port:readyfordata (readyfordata)"
+Info: RTC_SCL: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_RTC_SCL'
+Info: RTC_SCL:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_RTC_SCL --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0088_RTC_SCL_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0088_RTC_SCL_gen//DE0_NANO_SOC_QSYS_RTC_SCL_component_configuration.pl  --do_build_sim=0  ]
+Info: RTC_SCL: Done RTL generation for module 'DE0_NANO_SOC_QSYS_RTC_SCL'
+Info: RTC_SCL: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_pio "RTC_SCL"
+Info: RTC_SDA: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_RTC_SDA'
+Info: RTC_SDA:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_RTC_SDA --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0089_RTC_SDA_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0089_RTC_SDA_gen//DE0_NANO_SOC_QSYS_RTC_SDA_component_configuration.pl  --do_build_sim=0  ]
+Info: RTC_SDA: Done RTL generation for module 'DE0_NANO_SOC_QSYS_RTC_SDA'
+Info: RTC_SDA: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_pio "RTC_SDA"
+Info: adc_ltc2308: "DE0_NANO_SOC_QSYS" instantiated adc_ltc2308 "adc_ltc2308"
+Info: epcs_flash_controller_0: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_epcs_flash_controller_0'
+Info: epcs_flash_controller_0:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_epcs_flash_controller -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_epcs_flash_controller/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_epcs_flash_controller_0 --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0091_epcs_flash_controller_0_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0091_epcs_flash_controller_0_gen//DE0_NANO_SOC_QSYS_epcs_flash_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: epcs_flash_controller_0: Done RTL generation for module 'DE0_NANO_SOC_QSYS_epcs_flash_controller_0'
+Info: epcs_flash_controller_0: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_epcs_flash_controller "epcs_flash_controller_0"
+Info: jtag_uart: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_jtag_uart --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0092_jtag_uart_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0092_jtag_uart_gen//DE0_NANO_SOC_QSYS_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'DE0_NANO_SOC_QSYS_jtag_uart'
+Info: jtag_uart: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: nios2_qsys: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_nios2_qsys'
+Info: nios2_qsys:   Generation command is [exec C:/altera/15.0/quartus/bin64/eperlcmd.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/15.0/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=DE0_NANO_SOC_QSYS_nios2_qsys --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0093_nios2_qsys_gen/ --quartus_bindir=C:/altera/15.0/quartus/bin64 --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0093_nios2_qsys_gen//DE0_NANO_SOC_QSYS_nios2_qsys_processor_configuration.pl  --do_build_sim=0  ]
+Info: nios2_qsys: # 2016.05.11 20:54:52 (*) Starting Nios II generation
+Info: nios2_qsys: # 2016.05.11 20:54:52 (*)   Checking for plaintext license.
+Info: nios2_qsys: # 2016.05.11 20:54:54 (*)   Plaintext license not found.
+Info: nios2_qsys: # 2016.05.11 20:54:54 (*)   Checking for encrypted license (non-evaluation).
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)   Creating all objects for CPU
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)     Testbench
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)     Instruction decoding
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)       Instruction fields
+Info: nios2_qsys: # 2016.05.11 20:54:57 (*)       Instruction decodes
+Info: nios2_qsys: # 2016.05.11 20:54:59 (*)       Signals for RTL simulation waveforms
+Info: nios2_qsys: # 2016.05.11 20:54:59 (*)       Instruction controls
+Info: nios2_qsys: # 2016.05.11 20:54:59 (*)     Pipeline frontend
+Info: nios2_qsys: # 2016.05.11 20:54:59 (*)     Pipeline backend
+Info: nios2_qsys: # 2016.05.11 20:55:05 (*)   Generating RTL from CPU objects
+Info: nios2_qsys: # 2016.05.11 20:55:12 (*)   Creating encrypted RTL
+Info: nios2_qsys: # 2016.05.11 20:55:13 (*) Done Nios II generation
+Info: nios2_qsys: Done RTL generation for module 'DE0_NANO_SOC_QSYS_nios2_qsys'
+Info: nios2_qsys: "DE0_NANO_SOC_QSYS" instantiated altera_nios2_qsys "nios2_qsys"
+Info: onchip_memory2: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_onchip_memory2'
+Info: onchip_memory2:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_onchip_memory2 --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0094_onchip_memory2_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0094_onchip_memory2_gen//DE0_NANO_SOC_QSYS_onchip_memory2_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2: Done RTL generation for module 'DE0_NANO_SOC_QSYS_onchip_memory2'
+Info: onchip_memory2: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_onchip_memory2 "onchip_memory2"
+Info: pll_sys: "DE0_NANO_SOC_QSYS" instantiated altera_pll "pll_sys"
+Info: sw: Starting RTL generation for module 'DE0_NANO_SOC_QSYS_sw'
+Info: sw:   Generation command is [exec C:/altera/15.0/quartus/bin64/perl/bin/perl.exe -I C:/altera/15.0/quartus/bin64/perl/lib -I C:/altera/15.0/quartus/sopc_builder/bin/europa -I C:/altera/15.0/quartus/sopc_builder/bin/perl_lib -I C:/altera/15.0/quartus/sopc_builder/bin -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=DE0_NANO_SOC_QSYS_sw --dir=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0096_sw_gen/ --quartus_dir=C:/altera/15.0/quartus --verilog --config=C:/Users/Holguer/AppData/Local/Temp/alt6933_1113352680430924235.dir/0096_sw_gen//DE0_NANO_SOC_QSYS_sw_component_configuration.pl  --do_build_sim=0  ]
+Info: sw: Done RTL generation for module 'DE0_NANO_SOC_QSYS_sw'
+Info: sw: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_pio "sw"
+Info: sysid_qsys: "DE0_NANO_SOC_QSYS" instantiated altera_avalon_sysid_qsys "sysid_qsys"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "DE0_NANO_SOC_QSYS" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "DE0_NANO_SOC_QSYS" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_synchronizer: "DE0_NANO_SOC_QSYS" instantiated altera_irq_clock_crosser "irq_synchronizer"
+Info: rst_controller: "DE0_NANO_SOC_QSYS" instantiated altera_reset_controller "rst_controller"
+Info: nios2_qsys_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_qsys_data_master_translator"
+Info: jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_avalon_jtag_slave_translator"
+Info: nios2_qsys_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_qsys_data_master_agent"
+Info: jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info: jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: nios2_qsys_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "nios2_qsys_data_master_limiter"
+Info: Reusing file D:/Stericlinic/HWD/DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file D:/Stericlinic/HWD/DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info: rsp_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_003"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Stericlinic/HWD/DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/Stericlinic/HWD/DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/Stericlinic/HWD/DE0_NANO_SOC_GHRD/DE0_NANO_SOC_QSYS/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: DE0_NANO_SOC_QSYS: Done "DE0_NANO_SOC_QSYS" with 37 modules, 63 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
