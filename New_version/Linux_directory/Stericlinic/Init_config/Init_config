@@ -1,0 +1,73 @@
+{
+    "general": {
+        "current_cycle": 1,
+        "last_cycle": 1,
+        "current_page": 0
+    },
+    "gui": {
+	    "ini":	{
+	     	"ipC": "169.254.58.41",
+	     	"pas": "8587",
+	     	"autoPrint": 1,
+	     	"temperatura": "100°C",
+	     	"presion": "12 PSI",
+	     	"horainicio": "00:00",
+	     	"horafin": "00:00",
+	     	"Fecha": "31/12/2016",
+	     	"hora": "00:00",
+	     	"puerta": 0,
+	     	"lpuerta": 0,
+	     	"Sprint": 0,
+	     	"elec1.val": 0,
+	    	"elec2.val": 0,
+	    	"elec3.val": 0,
+	    	"elec4.val": 0
+	    },
+	    "sp_121mant": {
+	    	"Spre121": 330,
+	    	"Stemp121": 1210
+	    },
+	    "sp_134mant": {
+	    	"Spre134": 340,
+	    	"Stemp134": 1340
+	    },
+	    "error_121mant": {
+	    	"Etemp121": 0,
+	    	"Epres121": 0
+	    },
+	    "error_134mant": {
+	    	"Etemp134": 0,
+	    	"Epres134": 0
+	    },
+	    "tiempo_121mant": {
+	    	"T121e": 40,
+	    	"T121d": 10,
+	    	"T121s": 20
+	    },
+	     "tiempo_134mant": {
+	    	"T134e": 40,
+	    	"T134d": 10,
+	    	"T134s": 20
+	    },
+	    "llena_agua": {
+	    	"tanque": 0
+	    },
+	    "esteriliza": {
+	    	"timeMea": 0
+	    },
+	    "descarga": {
+	    	"timeMea": 0
+	    },
+	    "secado": {
+	    	"timeMea": 0
+	    },
+	    "finalizando": {
+	    	"done": 0
+	    },
+	    "finalizado": {
+	    	"done": 0
+	    }
+	}    
+}
+
+

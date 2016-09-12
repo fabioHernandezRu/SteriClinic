@@ -1,0 +1,37 @@
+module ADC_System(
+			input clk_50Mhz,
+			input [2:0]selected_channel,
+			output [11:0]ADC_data
+);
+
+										//start____counter_clk___ state
+localparam IDLE 		      =    
+localparam SET_CHANNEL     = 
+localparam GET_DATA_SAMPLE =
+localparam REST_FOR_A_WHILE=
+
+//ADC 
+reg [11:0]data_channels[7:0];
+reg [2:0]channelADC;
+wire start_measure;
+wire measure_done;
+
+
+//ADC
+adc_ltc2308 adc_ltc2308_inst
+(
+	.clk(clk_sig) ,	// input  clk_sig
+	.measure_start(measure_start_sig) ,	// input  measure_start_sig
+	.measure_ch(measure_ch_sig) ,	// input [2:0] measure_ch_sig
+	.measure_done(measure_done_sig) ,	// output  measure_done_sig
+	.measure_dataread(measure_dataread_sig) ,	// output [11:0] measure_dataread_sig
+	.ADC_CONVST(ADC_CONVST_sig) ,	// output  ADC_CONVST_sig
+	.ADC_SCK(ADC_SCK_sig) ,	// output  ADC_SCK_sig
+	.ADC_SDI(ADC_SDI_sig) ,	// output  ADC_SDI_sig
+	.ADC_SDO(ADC_SDO_sig) 	// input  ADC_SDO_sig
+);
+
+
+
+endmodule
+

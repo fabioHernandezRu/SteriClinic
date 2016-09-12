@@ -1,0 +1,199 @@
+{
+    "Pressure1": {
+        "descarga": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "estabilizacion": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "esteri": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "secado": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        }
+    },
+    "Pressure2": {
+        "descarga": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "estabilizacion": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "esteri": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "secado": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        }
+    },
+    "Temp1": {
+        "descarga": {
+            "average": 0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "estabilizacion": {
+            "average": 0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "esteri": {
+            "average": 0,
+            "data": [
+                0,
+                274
+            ],
+            "time": [
+                "15:00",
+                "15:00"
+            ]
+        },
+        "secado": {
+            "average": 0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        }
+    },
+    "Temp2": {
+        "descarga": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "estabilizacion": {
+            "average": 0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "esteri": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        },
+        "secado": {
+            "average": 0.0,
+            "data": [
+                0,
+                0
+            ],
+            "time": [
+                "00:00",
+                "00:00"
+            ]
+        }
+    },
+    "cycle": {
+        "TSecado": 0,
+        "Tdescarga": 0,
+        "Testeri": 0,
+        "date": "00/00/0000",
+        "endC": "00:00",
+        "number": 2,
+        "startC": "00:00",
+        "startE": "00:00",
+        "startS": "00:00",
+        "type": 137
+    }
+}
+
