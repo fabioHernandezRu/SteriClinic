@@ -1,0 +1,34 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst DE0_NANO_SOC_QSYS.pll_sys -pg 1 -lvl 2 -y 770
+preplace inst DE0_NANO_SOC_QSYS.RTC_SDA -pg 1 -lvl 3 -y 370
+preplace inst DE0_NANO_SOC_QSYS.nios2_qsys -pg 1 -lvl 1 -y 40
+preplace inst DE0_NANO_SOC_QSYS.adc_ltc2308 -pg 1 -lvl 2 -y 410
+preplace inst DE0_NANO_SOC_QSYS.RTC_SCL -pg 1 -lvl 3 -y 270
+preplace inst DE0_NANO_SOC_QSYS.sys_clk -pg 1 -lvl 3 -y 30
+preplace inst DE0_NANO_SOC_QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst DE0_NANO_SOC_QSYS.sysid_qsys -pg 1 -lvl 2 -y 670
+preplace inst DE0_NANO_SOC_QSYS.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst DE0_NANO_SOC_QSYS.clk_50 -pg 1 -lvl 1 -y 790
+preplace inst DE0_NANO_SOC_QSYS.print -pg 1 -lvl 2 -y 850
+preplace inst DE0_NANO_SOC_QSYS.onchip_memory2 -pg 1 -lvl 2 -y 580
+preplace inst DE0_NANO_SOC_QSYS.uart_0 -pg 1 -lvl 3 -y 130
+preplace inst DE0_NANO_SOC_QSYS.sw -pg 1 -lvl 2 -y 170
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.adc_ltc2308_conduit_end,(SLAVE)adc_ltc2308.conduit_end) 1 0 2 NJ 460 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)clk_50.clk_in,(SLAVE)DE0_NANO_SOC_QSYS.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)sw.irq,(SLAVE)sys_clk.irq,(SLAVE)jtag_uart.irq,(MASTER)nios2_qsys.d_irq,(SLAVE)uart_0.irq) 1 1 2 450 160 760
+preplace netloc INTERCONNECT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)adc_ltc2308.slave,(SLAVE)sw.s1,(SLAVE)sysid_qsys.control_slave,(SLAVE)nios2_qsys.jtag_debug_module,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)RTC_SDA.s1,(SLAVE)print.s1,(SLAVE)onchip_memory2.s1,(MASTER)nios2_qsys.data_master,(SLAVE)sys_clk.s1,(SLAVE)RTC_SCL.s1,(SLAVE)uart_0.s1,(MASTER)nios2_qsys.instruction_master) 1 0 3 180 190 490 300 820
+preplace netloc INTERCONNECT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)RTC_SCL.reset,(SLAVE)sys_clk.reset,(SLAVE)nios2_qsys.reset_n,(MASTER)nios2_qsys.jtag_debug_module_reset,(SLAVE)jtag_uart.reset,(SLAVE)onchip_memory2.reset1,(SLAVE)sw.reset,(SLAVE)print.reset,(SLAVE)RTC_SDA.reset,(SLAVE)adc_ltc2308.reset_sink,(MASTER)clk_50.clk_reset,(SLAVE)uart_0.reset,(SLAVE)pll_sys.reset,(SLAVE)sysid_qsys.reset) 1 0 3 200 170 530 320 860
+preplace netloc POINT_TO_POINT<net_container>DE0_NANO_SOC_QSYS</net_container>(MASTER)pll_sys.outclk1,(SLAVE)adc_ltc2308.clock_sink_adc) 1 1 2 570 550 760
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.uart_0,(SLAVE)uart_0.external_connection) 1 0 3 NJ 210 NJ 140 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)sw.external_connection,(SLAVE)DE0_NANO_SOC_QSYS.sw_external_connection) 1 0 2 NJ 230 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.rtc_sda,(SLAVE)RTC_SDA.external_connection) 1 0 3 NJ 400 NJ 400 NJ
+preplace netloc FAN_OUT<net_container>DE0_NANO_SOC_QSYS</net_container>(MASTER)clk_50.clk,(SLAVE)pll_sys.refclk,(SLAVE)print.clk) 1 1 1 510
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.rtc_scl,(SLAVE)RTC_SCL.external_connection) 1 0 3 NJ 340 NJ 340 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(MASTER)pll_sys.outclk2,(MASTER)DE0_NANO_SOC_QSYS.pll_sys_outclk2) 1 2 2 NJ 820 NJ
+preplace netloc FAN_OUT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)adc_ltc2308.clock_sink,(SLAVE)sw.clk,(SLAVE)jtag_uart.clk,(SLAVE)nios2_qsys.clk,(SLAVE)sys_clk.clk,(SLAVE)uart_0.clk,(MASTER)pll_sys.outclk0,(SLAVE)RTC_SCL.clk,(SLAVE)onchip_memory2.clk1,(SLAVE)sysid_qsys.clk,(SLAVE)RTC_SDA.clk) 1 0 3 180 30 470 570 800
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)DE0_NANO_SOC_QSYS.print,(SLAVE)print.external_connection) 1 0 2 NJ 880 NJ
+preplace netloc EXPORT<net_container>DE0_NANO_SOC_QSYS</net_container>(SLAVE)pll_sys.locked,(SLAVE)DE0_NANO_SOC_QSYS.pll_sys_locked) 1 0 2 NJ 780 NJ
+levelinfo -pg 1 0 150 1190
+levelinfo -hier DE0_NANO_SOC_QSYS 160 230 610 910 1060
