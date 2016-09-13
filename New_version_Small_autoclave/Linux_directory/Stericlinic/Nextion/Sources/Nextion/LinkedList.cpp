@@ -71,8 +71,8 @@ Item * LinkedList::getItem(string itemKey) {
 	Item * q = head;
 	while (q) {
 		p = q;
-		printf(" buscando %x %x %x\n", p->key.c_str()[0], p->key.c_str()[1],
-				p->key.c_str()[2], p->key.c_str()[3]);
+		/*printf(" buscando %x %x %x\n", p->key.c_str()[0], p->key.c_str()[1],
+				p->key.c_str()[2], p->key.c_str()[3]);*/
 		if ((p != head) && (p->key == itemKey)) {
 			printf(" encontro\n");
 			return p;

@@ -47,6 +47,46 @@ void audio::Beep2(float freq, int millseconds) {
 	set_frequency(0);
 }
 
+void audio::button_beep(){
+
+	this->Beep(500, 5);
+	this->Beep(700, 10);
+	this->Beep(500, 5);
+	this->mute();
+}
+
+void audio::siren(){
+	static int ramp=500;
+	static char dir=0;
+
+	if(dir==0){
+		ramp=ramp+10;
+	}
+	else {
+		ramp=ramp-10;
+	}
+
+	if(ramp>=800){
+		dir=1;
+	}
+	else if(ramp<=500){
+		dir=0;
+	}
+
+
+	this->Beep(ramp,5);
+
+	//this->mute();
+
+}
+
+void audio::button_beep2(){
+
+	this->Beep(700, 10);
+	this->Beep(400, 5);
+	this->mute();
+}
+
 
 void audio::jingle_bells() {
 	this->refrenSolo();
@@ -79,6 +119,7 @@ void audio::boot() {
 	this->Beep2(261.262,full2);
 
 	this->mute();
+	this->sleep(BOOT_DELAY);
 }
 
 void audio::refrenSolo() {

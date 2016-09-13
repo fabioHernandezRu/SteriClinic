@@ -771,7 +771,6 @@ private:
 #endif
 
 public:
-	int current_page;
 	void * update_events(void * shared);
 	char getNextionCmd_available();
 	char getNextionCmd();

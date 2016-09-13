@@ -7,14 +7,14 @@
     "gui": {
 	    "ini":	{
 	     	"ipC": "169.254.58.41",
-	     	"pas": "8587",
+	     	"pas": "8487",
 	     	"autoPrint": 1,
 	     	"temperatura": "100°C",
 	     	"presion": "12 PSI",
 	     	"horainicio": "00:00",
 	     	"horafin": "00:00",
 	     	"Fecha": "31/12/2016",
-	     	"hora": "00:00",
+	     	"hora": "13:08",
 	     	"puerta": 0,
 	     	"lpuerta": 0,
 	     	"Sprint": 0,
@@ -32,12 +32,12 @@
 	    	"Stemp134": 1340
 	    },
 	    "error_121mant": {
-	    	"Etemp121": 0,
-	    	"Epres121": 0
+	    	"Etemp121": 2,
+	    	"Epres121": 1
 	    },
 	    "error_134mant": {
-	    	"Etemp134": 0,
-	    	"Epres134": 0
+	    	"Etemp134": 4,
+	    	"Epres134": 2
 	    },
 	    "tiempo_121mant": {
 	    	"T121e": 40,

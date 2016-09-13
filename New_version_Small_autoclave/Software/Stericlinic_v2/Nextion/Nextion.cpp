@@ -38,6 +38,16 @@ extern "C" {
 #include "../uart_fpga/uart.h"
 }
 
+#define SOUND_BUTTON 1
+
+#ifdef SOUND_BUTTON
+
+#include "../audio/audio.h"
+
+extern audio * sound_card;
+
+#endif
+
 nextionRX NextionRX[NEXTION_LEN + 1];
 
 unsigned int nextion_tail = 0;
@@ -227,6 +237,10 @@ void * Nextion::update_events(void * shared) {
 				NextionRX[cmnd_number].command[3] = 0x0;
 				NextionRX[cmnd_number].command[4] = 0x0;
 				NextionRX[cmnd_number].command[5] = 0x0;
+
+				this->current_page=NextionRX[cmnd_number].command[1];
+
+
 				//busca el la lista eventos
 				result =
 						Events_table.getItemByKey(
@@ -258,6 +272,15 @@ void * Nextion::update_events(void * shared) {
 								0xf5 : NextionRX[cmnd_number].command[3];
 				NextionRX[cmnd_number].command[4] = 0x0;
 				NextionRX[cmnd_number].command[5] = 0x0;
+
+#ifdef SOUND_BUTTON
+				if(NextionRX[cmnd_number].command[3]) {
+					sound_card->button_beep();
+				}
+				else {
+					sound_card->button_beep2();
+				}
+#endif
 				//busca el la lista eventos
 				result =
 						Events_table.getItemByKey(
@@ -300,7 +323,7 @@ int Nextion::nextionF(char *str, size_t count, const char *fmt, ...) {
 int Nextion::nextionF(const char *fmt, ...) {
 	char str[500];
 	size_t count;
-	count= 500;
+	count = 500;
 	size_t ret;
 	va_list ap;
 

@@ -30,6 +30,7 @@ HashTable::HashTable(int tableLength) {
 // Returns an array location for a given item key.
 int HashTable::hash(string itemKey) {
 	int value = 0;
+	//printf("Len = %d\n", itemKey.length());
 	for (int i = 0; i < itemKey.length(); i++){
 		value += itemKey[i];
 	}

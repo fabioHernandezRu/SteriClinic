@@ -8,6 +8,9 @@
 #ifndef AUDIO_H_
 #define AUDIO_H_
 
+#define BOOT_DELAY 200
+
+
 class audio {
 
 public:
@@ -19,6 +22,9 @@ public:
 	void mute();
 	void Beep(float freq,int millseconds);
 	void Beep2(float freq,int millseconds);
+	void button_beep();
+	void button_beep2();
+	void siren();
 	void test_mario_song();
 	void star_wars_song();
 	void coupleSolo();
