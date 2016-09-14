@@ -16,9 +16,13 @@ Sonido al Boot de Inicio.
 Integracion al Datalogger, lo que quiere decir q todas las variables de Nextion son almacenables por el ARM en disco.
 Acceso al menu de mantenimiento con total control de todos los elementos de la board(Valvulas, sensores, etc).
 
+Videos: 
+ boot --> https://youtu.be/RCzLulutQhg 
+
+
 Pendientes:
 
-1)Videos de explicación, y pruebas de este entregable.
+1) pruebas de este entregable.
 
 Otros Pendientes:
 1) Pagina web.
