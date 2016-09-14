@@ -20,7 +20,7 @@ Videos:
  boot --> https://youtu.be/RCzLulutQhg 
 	(Ver con sonido)
  Explicaciones
-	1) https://www.youtube.com/watch?v=06hYOt6X7v8&feature=youtu.be
+	1) https://youtu.be/06hYOt6X7v8
 	2) 
 
 Pendientes:
