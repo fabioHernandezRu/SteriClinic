@@ -9,12 +9,12 @@
             "timeMea": 0
         },
         "error_121mant": {
-            "Epres121": 3,
-            "Etemp121": 3
+            "Epres121": -1,
+            "Etemp121": -2
         },
         "error_134mant": {
-            "Epres134": 1,
-            "Etemp134": 4
+            "Epres134": 7,
+            "Etemp134": -6
         },
         "esteriliza": {
             "timeMea": 0
@@ -26,20 +26,20 @@
             "done": 0
         },
         "ini": {
-            "Fecha": "01/01/00",
+            "Fecha": "00/00/00",
             "Sprint": 0,
             "autoPrint": 1,
             "elec1.val": 1,
             "elec2.val": 1,
             "elec3.val": 1,
             "elec4.val": 1,
-            "hora": "02:23",
+            "hora": "00:00",
             "horafin": "00:00",
             "horainicio": "00:00",
             "ipC": "169.254.58.41",
             "lpuerta": 0,
             "pas": "8487",
-            "presion": "33.28",
+            "presion": "33.30",
             "puerta": 0,
             "temperatura": "-100.00"
         },
@@ -69,6 +69,4 @@
         }
     }
 }
-
-
 
