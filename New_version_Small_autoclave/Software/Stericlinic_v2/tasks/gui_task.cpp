@@ -555,10 +555,11 @@ void *rtc_sd_and_ethernet_task(void *x_void_ptr) {
 	 * */
 	LCD->nextionF("page ini");
 	LCD->nextionF("page ini");
-	sound_card->boot();
+	sound_card->boot();// hacer que suene la cancion de inicializacion
 	init_gui_configs();
 	//enviar ir a la pagina principal
 	LCD->nextionF("page home");
+
 
 	while (1) { //bucle infinito
 
@@ -670,11 +671,11 @@ void * pages_refresh(void * shared) {
 		if(Interrup->get_final()!= puerta){// final de carrera
 			lpuerta=puerta;// estado anterior de la puerta
 			puerta=Interrup->final;
-			SET_JSON_INT(["gui"]["ini"]["puerta"], puerta);
-			SET_JSON_INT(["gui"]["ini"]["lpuerta"], lpuerta);
-			SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["puerta"], "ini.puerta.val=%d");
-			SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["lpuerta"], "ini.lpuerta.val=%d");
 		}
+		SET_JSON_INT(["gui"]["ini"]["puerta"], puerta);
+		SET_JSON_INT(["gui"]["ini"]["lpuerta"], lpuerta);
+		SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["puerta"], "ini.puerta.val=%d");
+		SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["lpuerta"], "ini.lpuerta.val=%d");
 		//Nivel Tanque
 		if (ElectroSondas->get(2)) {
 			SET_JSON_INT(["gui"]["llena_agua"]["tanque"], 100);
@@ -769,8 +770,8 @@ void * alarm_task(void * shared) {
 	 *										|	 |	 |	 | 		 ------------> Funcion a la que se llama cuando se recibe el evento
 	 *										|	 |	 |	  ------> Evento down(Tipo de evento q se esta realizando en el caso de boton, up(release) o down(press))
 	 *										|	 |	 ------------> ID del objeto dentro de la pagina
-	 |    -----> Pagina donde esta el objeto
-	 ----------> Es el tipo de objeto q se va recibir, en este caso 0x65 es un boton,
+	 	 	 	 	 	 	 	 	 	 	|	 |-----> Pagina donde esta el objeto
+	 	 	 	 	 	 	 	 	 	 	 ----------> Es el tipo de objeto q se va recibir, en este caso 0x65 es un boton,
 	 * 	   		  									    para el caso de paginas seria 0x66, y para caso de datos string 0x70, y 0x71 para datos de un numero entero.
 	 *Ejemplo 2: "\x65\x03\x16\xf5"
 	 *				|	|	|	|
@@ -946,7 +947,7 @@ void init_gui() {
 	//task para refrescar eventos de recepcion
 	pthread_create(&refresh_events, NULL, update_events, NULL);
 
-	//task para refrescar eventos de recepcion
+	//task para actualizar variables del sistema nextion
 	pthread_create(&rtc_sd_and_ethernet, NULL, rtc_sd_and_ethernet_task, NULL);
 
 	//task para alarma

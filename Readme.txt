@@ -18,7 +18,10 @@ Acceso al menu de mantenimiento con total control de todos los elementos de la b
 
 Videos: 
  boot --> https://youtu.be/RCzLulutQhg 
-
+	(Ver con sonido)
+ Explicaciones
+	1) https://www.youtube.com/watch?v=06hYOt6X7v8&feature=youtu.be
+	2) 
 
 Pendientes:
 

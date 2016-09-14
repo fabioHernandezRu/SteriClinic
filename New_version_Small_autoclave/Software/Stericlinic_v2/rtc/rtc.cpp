@@ -529,7 +529,7 @@ rtc::rtc() {
 		int deviceI2CAddress = 0x68;
 
 		// open device on /dev/i2c-0
-		if ((deviceHandle = open("/dev/i2c-1", O_RDWR)) < 0) {
+		if ((deviceHandle = open(DEVICE_NAME, O_RDWR)) < 0) {
 			printf("Error: Couldn't open device! %d\n", deviceHandle);
 
 		}
