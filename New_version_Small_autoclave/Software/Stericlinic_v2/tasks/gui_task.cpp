@@ -85,6 +85,18 @@ int print(void * shared) {
 
 	int last_cycle = grabador->init_configs["general"]["last_cycle"];
 
+	/*
+	 * La funcion printF de la impresora funciona exactamente igual q la funcion printf del estandar de C/C++
+	 * esta funcion tiene la ventaja q se envia directamente un texto en el formato deseado a la impresora determinando
+	 * la ubicacion del archivo de una manera simple y rapida
+	 * Ejemplo:
+	 * 	     impresora->printF("/%s/Cycle%dPrint/cyclep%d","Stericlinic" , 2 , last_cycle);
+	 * 	                          ^		  ^             ^       v          v    v
+	 * 	                          |       |				|		|		   |	|
+	 * 							  --------|-------------|--------          |    |
+	 * 							          --------------|-------------------    |
+	 * 							          				-------------------------
+	 * */
 	impresora->printF("/Stericlinic/Cycle2Print/cyclep%d", last_cycle);
 	printf("mandando a imprimir\n");
 
@@ -409,7 +421,7 @@ int test_printer(void * shared) {
  * update_events() --->	Esta funcion esta encargada de hacer efectivos los eventos enlazados a cada boton del sistema.
  * 						sin esta funcion los eventos no funcionarian.
  * pages_refresh() --> Verifica en que pagina se esta en el momento para enviar periodicamente datos como
- * 					   el estado de las valvulas, el nivel del tanque
+ * 					   el estado de las valvulas, el nivel del tanque, y el estado de la puerta
  * alarm_task() ---> esta encargado de hacer efectivas las alarmas, y verificar el boton de emergencia.
  * 					 si se esta en la pagina 27(alarma) se activara una alarma por medio de sofwtare usando
  * 					 la funcion sound_card->siren();
@@ -434,13 +446,33 @@ void *rx_uart(void *x_void_ptr) {
 
 }
 
+/*Explicacion de MACROS
+ *
+ * */
 void init_gui_configs() {
 
 	std::string ip_to_Set = grabador->init_configs["gui"]["ini"]["ipC"];
 	//Seteo ip
 	Ethernet->setIP("eth0", ip_to_Set);
 
+
+
 	//enviar variables de inicializacion a la pantalla
+	/*
+	 * SEND_SINGLE_STR_NEXTION ==> el MACRO envia directamente un string desde el origen JSON a la pantalla Nextion
+	 * Ejemplo:
+	 *   SEND_SINGLE_STR_NEXTION(["gui"]["ini"]["ipC"], "ini.ipC.txt=\"%s\"");
+	 *   						  |________________|	|__________________|
+	 *   							|									|
+	 *   							|									---> Texto en el formato q se quiere enviar, debe ser 1 solo argumento
+	 *   							---------------------------------------> ubicacion en el archivo JSON
+	 *
+	 * De la misma manera funciona SEND_SINGLE_INT_NEXTION, y SEND_SINGLE_FLOAT_NEXTION
+	 *
+	 *
+	 *
+	 *
+	 * */
 	SEND_SINGLE_STR_NEXTION(["gui"]["ini"]["ipC"], "ini.ipC.txt=\"%s\"");
 	SEND_SINGLE_STR_NEXTION(["gui"]["ini"]["pas"], "ini.pas.txt=\"%s\"");
 	SEND_SINGLE_STR_NEXTION(["gui"]["ini"]["temperatura"],
@@ -508,6 +540,19 @@ void *rtc_sd_and_ethernet_task(void *x_void_ptr) {
 	char counter = 0;
 
 //	//enviar ir a la pagina principal
+
+
+	/*
+	 * La funcion printF de Nextion funciona exactamente igual q la funcion printf del estandar de C/C++
+	 * esta funcion tiene la ventaja q se envia directamente un texto en el formato deseado a la pantalla Nextion
+	 * Ejemplo:
+	 * 	     LCD->nextionF("%s.%s.val=\"%d\"","ini" ,"puerta" , 1);
+	 * 	                     ^  ^        ^      v        v      v
+	 * 	                     |	|	     |		|        |      |
+	 * 	                     ---|--------|-------		 |		|
+	 * 	                    	---------|----------------      |
+	 * 	                    			 ------------------------
+	 * */
 	LCD->nextionF("page ini");
 	LCD->nextionF("page ini");
 	sound_card->boot();
@@ -525,7 +570,21 @@ void *rtc_sd_and_ethernet_task(void *x_void_ptr) {
 			snprintf(&buffer_task_rtc[0], sizeof(buffer_task_rtc), "%02d:%02d",
 					real_time_clock->yymmddhhmmss.hour,
 					real_time_clock->yymmddhhmmss.minutes);
-
+			/*
+			 * SET_JSON_STR ==> el MACRO envia directamente un string al JSON
+			 * Ejemplo:
+			 *   SET_JSON_STR(["gui"]["ini"]["hora"], buffer_task_rtc);
+             * 				  |________________|	|__________________|
+			 *   				|									|
+			 *   				|									---> String que se desea guardar en el JSON
+			 *   			 	------------------------------------|--> ubicacion en el archivo JSON
+			 *														---> en el caso que sea un INT, se usa SET_JSON_INT y en el caso de un FLOAT SET_JSON_FLOAT
+			 * De la misma manera funciona SET_JSON_INT, y SET_JSON_FLOAT
+			 *
+			 *
+			 *
+			 *
+			 * */
 			SET_JSON_STR(["gui"]["ini"]["hora"], buffer_task_rtc);
 			snprintf(&buffer_task_rtc[0], sizeof(buffer_task_rtc),
 					"%02d/%02d/%02d", real_time_clock->yymmddhhmmss.date,
@@ -590,6 +649,8 @@ void * update_events(void * shared) {
 
 void * pages_refresh(void * shared) {
 	char buffer_refresh[100];
+	char puerta=0,lpuerta=0;
+
 	while (1) {
 		if (LCD->current_page == 3) //Mantenimiento
 				{
@@ -603,6 +664,16 @@ void * pages_refresh(void * shared) {
 			SET_JSON_INT(["gui"]["ini"]["elec4.val"], ElectroSondas->get(3));
 			LCD->nextionF("ini.elec4.val=%d", ElectroSondas->get(3));
 
+		}
+
+		//estado de la puerta:
+		if(Interrup->get_final()!= puerta){// final de carrera
+			lpuerta=puerta;// estado anterior de la puerta
+			puerta=Interrup->final;
+			SET_JSON_INT(["gui"]["ini"]["puerta"], puerta);
+			SET_JSON_INT(["gui"]["ini"]["lpuerta"], lpuerta);
+			SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["puerta"], "ini.puerta.val=%d");
+			SEND_SINGLE_INT_NEXTION(["gui"]["ini"]["lpuerta"], "ini.lpuerta.val=%d");
 		}
 		//Nivel Tanque
 		if (ElectroSondas->get(2)) {
