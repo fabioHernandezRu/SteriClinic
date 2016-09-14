@@ -86,6 +86,8 @@ typedef struct Nextion_cmd_rx {
 	signed char lencommand;
 } nextionRX;
 
+extern nextionRX NextionRX[NEXTION_LEN + 1];
+
 class Nextion {
 private:
 

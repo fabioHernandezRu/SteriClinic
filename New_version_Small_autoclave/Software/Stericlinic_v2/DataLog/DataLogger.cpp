@@ -14,6 +14,11 @@
 
 #include "json.hpp"
 
+std::string send_string;
+int send_int;
+float send_float;
+
+
 char buffer_data_logger[512];
 DataLogger::DataLogger() {
 	// TODO Auto-generated constructor stub

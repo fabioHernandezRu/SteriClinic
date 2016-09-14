@@ -18,7 +18,31 @@
 
 using json = nlohmann::json;
 
+//Variables Necesarias para
 
+extern std::string send_string;
+extern int send_int;
+extern float send_float;
+
+
+//Seccion donde se hacen MACROS para hacer facil en envio de datos desde JSON hacia Nextion y guardar datos JSON
+#define SEND_SINGLE_STR_NEXTION(input,input2) send_string=grabador->init_configs input; \
+LCD->nextionF(input2,send_string.c_str())
+
+#define SEND_SINGLE_INT_NEXTION(input,input2) send_int=grabador->init_configs input; \
+LCD->nextionF(input2,send_int)
+
+#define SEND_SINGLE_FLOAT_NEXTION(input,input2) send_float=grabador->init_configs input; \
+LCD->nextionF(input2,send_float)
+
+#define SET_JSON_STR(input,input2) send_string=input2; \
+grabador->init_configs input=send_string
+
+#define SET_JSON_INT(input,input2) send_int=input2; \
+grabador->init_configs input=send_int
+
+#define SET_JSON_FLOAT(input,input2) send_float=input2; \
+grabador->init_configs input=send_float
 
 
 class DataLogger {
