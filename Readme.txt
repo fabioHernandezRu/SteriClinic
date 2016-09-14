@@ -20,8 +20,10 @@ Videos:
  boot --> https://youtu.be/RCzLulutQhg 
 	(Ver con sonido)
  Explicaciones
-	1) https://youtu.be/06hYOt6X7v8
-	2) 
+	1) https://youtu.be/06hYOt6X7v8 --> Intro ARM y Nextion
+	2) https://youtu.be/eV6HMTO3BoQ --> Intro ARM y Nextion 2
+	3) --> Como crear un nuevo proyecto en base de las librerias.
+	4) --> Estructura de archivos de linux para Autoclaves
 
 Pendientes:
 

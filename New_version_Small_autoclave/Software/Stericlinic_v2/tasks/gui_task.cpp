@@ -576,9 +576,9 @@ void *rtc_sd_and_ethernet_task(void *x_void_ptr) {
 			 * Ejemplo:
 			 *   SET_JSON_STR(["gui"]["ini"]["hora"], buffer_task_rtc);
              * 				  |________________|	|__________________|
-			 *   				|									|
-			 *   				|									---> String que se desea guardar en el JSON
-			 *   			 	------------------------------------|--> ubicacion en el archivo JSON
+			 *   				|									| |
+			 *   				|									| --> String que se desea guardar en el JSON
+			 *   			 	------------------------------------|---> ubicacion en el archivo JSON
 			 *														---> en el caso que sea un INT, se usa SET_JSON_INT y en el caso de un FLOAT SET_JSON_FLOAT
 			 * De la misma manera funciona SET_JSON_INT, y SET_JSON_FLOAT
 			 *
